@@ -1,9 +1,13 @@
 public class test {
     public static void main(String[] args) {
-        System.out.println("Täna õppisime:");
-        System.out.println("1. JDK installeerimine ja seadistamine");
-        System.out.println("2. IDE installeerimine ja seadistamine");
-        System.out.println("3. IDE kasutamine");
-        System.out.println("3. git VCS kasutamine");
+        int[] numbrid = {1, 2, 3, 4, 5};
+        System.out.println(numbrid.length);
+        System.out.println(numbrid[0]);
+        System.out.println(numbrid[1]);
+        System.out.println(numbrid[2]);
+        System.out.println(numbrid[3]);
+        System.out.println(numbrid[4]);
     }
+
+
 }
