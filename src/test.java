@@ -1,7 +1,7 @@
 /*
  * Muutujate kasutamise näide
  * autor - Karl Karilaid
- * ülesanne 1.3
+ * ülesanne 2.1
  * */
 
 import java.util.Scanner;
@@ -12,14 +12,14 @@ public class test {
         //lubame kasutajal sisestada midagi
         Scanner sisend = new Scanner(System.in);
         //selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Sisestage astme alus: ");
+        System.out.println("Palun sisesta pilvede kõrgus: ");
         //salvestame kasutaja sisestatud väärtuse
-        int astmeAlus = sisend.nextInt();
-        System.out.println("Siestage astendaja: ");
-        int astendaja = sisend.nextInt();
-        //arvutamine
-        int tulemus = (int) Math.pow(astmeAlus, astendaja)
-        // väljastamine
-        System.out.println(tulemus);
+        double pilvedeKorgus = sisend.nextDouble();
+        //kontroll
+        if (pilvedeKorgus > 6.0) {
+            System.out.println("Need on ülemised pilved");
+        } else {
+            System.out.println("Need ei ole ülemised pilved");
+        }
     }
 }
