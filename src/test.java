@@ -1,7 +1,7 @@
 /*
- * Tingimuslausete kasutamise näide
+ * Tsüklid
  * autor - Karl Karilaid
- * ülesanne 2.2
+ * ülesanne 3.1
  * */
 
 import java.util.Scanner;
@@ -12,18 +12,20 @@ public class test {
         //lubame kasutajal sisestada midagi
         Scanner sisend = new Scanner(System.in);
         //selgitame kasutajale, mida tuleb sisestada
-        System.out.println("Palun sisesta punktide summa: ");
+        System.out.println("Sisesta mitu korda tuleb äratada: ");
         //salvestame kasutaja sisestatud väärtuse
-        double punktid = sisend.nextDouble();
+        double mituKorda = sisend.nextDouble();
+        //korduv tegevus
+        //defineerime tsükli juhtimismuutuja
+        int kord = 1;
         //kontroll
-        if (punktid >= 0 && punktid < 66) {
-            System.out.println("Vähem kui kandideerimiseks võimalik");
-        } else if (punktid >= 66 && punktid < 85) {
-            System.out.println("Kandideerimine vastuvõtule");
-        } else if (punktid >= 85 && punktid <= 100) {
-            System.out.println("Vastuvõtt tagatud");
-        } else if (punktid < 0 || punktid > 100) {
-            System.out.println("Vigane punktisumma");
+        while (kord <= mituKorda) {
+            System.out.println("Tõuse ja sära!");
+            // juhtimismuutaja väärtuse suurendamine
+            kord++; //sama, mis kord += 1
+
         }
+
+
     }
 }
