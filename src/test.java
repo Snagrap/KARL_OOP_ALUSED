@@ -1,3 +1,9 @@
+/*
+ *massiivid
+ * autor Karl Karilaid
+ *
+ */
+
 public class test {
     public static void main(String[] args) {
         int[] numbrid = new int[10];
@@ -7,11 +13,9 @@ public class test {
         numbrid[3] = 4;
         numbrid[4] = 5;
         System.out.println(numbrid.length);
-        System.out.println(numbrid[0]);
-        System.out.println(numbrid[1]);
-        System.out.println(numbrid[2]);
-        System.out.println(numbrid[3]);
-        System.out.println(numbrid[4]);
+        for (int i = 0; i < numbrid.length; i++) {
+            System.out.println(numbrid[i]);
+        }
         numbrid[5] = 6;
         System.out.println(numbrid[5]);
     }
