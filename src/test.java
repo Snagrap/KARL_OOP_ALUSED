@@ -1,18 +1,17 @@
 /*
- * massiivid
+ * Muutujate kasutamise näide
  * autor - Karl Karilaid
- * ülesanne 5.1
+ * ülesanne 1.2
  * */
-
-import java.util.Scanner;
 
 public class test {
     public static void main(String[] args) {
-        int[] vastuvoetud = {2803, 2626, 2359, 1927, 2236, 2281, 2394, 2484, 2468};
-        Scanner sisend = new Scanner(System.in);
-        System.out.println("Sisesta aasta: ");
-        int aasta = sisend.nextInt();
-        int massiiviIndeks = aasta - 2011;
-        System.out.println("Vastuvõetud on " + vastuvoetud[massiiviIndeks]);
+        //defineerime muutujad
+        int aasta = 2020;
+        String liblikas = "teelehe-mosaiikliblikas";
+        String lauseKeskosa = ". aasta liblikas on ";
+        String lause = aasta + lauseKeskosa + liblikas;
+        // väljastamine
+        System.out.println(lause);
     }
 }
