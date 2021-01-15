@@ -1,19 +1,19 @@
 /*
- * Sissetulekud
+ * Tahvli juurde
  * autor - Karl Karilaid
- * ülesanne 5.3a
+ * ülesanne 5.4c
  * */
 
 import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class test {
     public static void main(String[] args) {
-        // massiiv faili sisu hoidmiseks
-        ArrayList<Double> tehingud = new ArrayList<>();
-        // määrame fail ja kontrollime, kas on võiamlik lugeda andmed
-        File fail = new File("C:\\Users\\karl\\IdeaProjects\\oop_alused\\src\\konto.txt");
+        ArrayList<String> opilased = new ArrayList<>();
+        File fail = new File("C:\\Users\\karl\\IdeaProjects\\oop_alused\\src\\nimekiri.txt");
         Scanner sisendFailist = null;
         try {
             sisendFailist = new Scanner(fail);
@@ -22,16 +22,16 @@ public class test {
         }
         // loeme failist
         while (sisendFailist.hasNextLine()) {
-            Double rida = Double.parseDouble(sisendFailist.nextLine());
-            tehingud.add(rida); // lisame loetud väärtus nimekirja sisse
+            String rida = sisendFailist.nextLine();
+            opilased.add(rida); // lisame loetud väärtus nimekirja sisse
         }
         sisendFailist.close();
-        // vaatame nimekirja sisu
-        for (int i = 0; i < tehingud.size(); i++) {
-            // väljastame ainult positiivsed
-            if (tehingud.get(i) >= 0) {
-                System.out.println(tehingud.get(i));
-            }
-        }
+        LocalDateTime tananeKuupaev = LocalDateTime.now();
+        System.out.println("Tänane kuupäev ilma vorminduseta: " + tananeKuupaev);
+        DateTimeFormatter kuupaevaVormindus = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:MM:ss");
+        String tananeKuupaevVormindatud = tananeKuupaev.format(kuupaevaVormindus);
+        System.out.println("Tänane vormindatud kuupäev " + tananeKuupaevVormindatud);
+        int indeks = Integer.parseInt(tananeKuupaevVormindatud);
+        System.out.println(opilased.get(indeks - 1));
     }
 }
