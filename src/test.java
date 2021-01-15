@@ -1,26 +1,29 @@
 /*
- * Peo eelarve
+ * Banner
  * autor - Karl Karilaid
- * ülesanne 6.3
+ * ülesanne 6.1
  * */
 
 import java.util.Scanner;
 
 public class test {
     //eelarve meetod
-    static int eelarve(int kulalisteArv) {
-        int summa = kulalisteArv * 10 + 55;
-        return summa;
+    static String banner(String lause) {
+        String suur_lause = lause.toUpperCase();
+        return suur_lause;
     }
 
     public static void main(String[] args) {
         Scanner sisend = new Scanner(System.in);
-        System.out.println("Mitu inimest on kutsutud: ");
-        int kutsutud = sisend.nextInt();
-        System.out.println("Mitu inimest tuleb peole:");
-        int kindel = sisend.nextInt();
-        System.out.println("Maksimaalne eelarve: " + eelarve(kutsutud));
-        System.out.println("Minimaalne eelarve: " + eelarve(kindel));
+        System.out.println("Mitu korda soovite lauset näidata: ");
+        int kord = sisend.nextInt();
+        sisend = new Scanner(System.in);
+        System.out.println("Mis lauset soovite näidata:");
+        String lause = sisend.nextLine();
+        while (kord > 0) {
+            System.out.println(banner(lause));
+            kord -= 1;
+        }
     }
 
 }
