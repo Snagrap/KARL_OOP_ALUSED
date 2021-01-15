@@ -1,28 +1,37 @@
 /*
- * Tervitused mõtisklusega
+ * Sissetulekud
  * autor - Karl Karilaid
- * ülesanne 6.4a
+ * ülesanne 5.3a
  * */
 
+import java.io.File;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class test {
-    static Object tervitus(int külalised) {
-        System.out.println("Võõrustaja: Tere!");
-        System.out.println("Täna " + külalised + ". korda tervitada, mõtiskleb võõrustaja.");
-        System.out.println("Külaline: Tere, suur tänu kutse eest!");
-        return null;
-    }
-
     public static void main(String[] args) {
-        Scanner sisend = new Scanner(System.in);
-        System.out.println("Sisestage külaliste arv: ");
-        int külalised = sisend.nextInt();
-        int kord = 1;
-        while (külalised >= kord) {
-            tervitus(kord);
-            kord++;
+        // massiiv faili sisu hoidmiseks
+        ArrayList<Double> tehingud = new ArrayList<>();
+        // määrame fail ja kontrollime, kas on võiamlik lugeda andmed
+        File fail = new File("C:\\Users\\karl\\IdeaProjects\\oop_alused\\src\\konto.txt");
+        Scanner sisendFailist = null;
+        try {
+            sisendFailist = new Scanner(fail);
+        } catch (Exception e) {
+            System.out.println("Faili pole - " + e.getMessage());
         }
-
+        // loeme failist
+        while (sisendFailist.hasNextLine()) {
+            Double rida = Double.parseDouble(sisendFailist.nextLine());
+            tehingud.add(rida); // lisame loetud väärtus nimekirja sisse
+        }
+        sisendFailist.close();
+        // vaatame nimekirja sisu
+        for (int i = 0; i < tehingud.size(); i++) {
+            // väljastame ainult positiivsed
+            if (tehingud.get(i) >= 0) {
+                System.out.println(tehingud.get(i));
+            }
+        }
     }
 }
