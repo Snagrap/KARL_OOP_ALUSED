@@ -1,26 +1,34 @@
 /*
- * -
+ * Panga ülesanne
  * autor - Karl Karilaid
  * ülesanne -
  * */
 
-import java.util.HashMap;
-import java.util.Scanner;
-
 public class test {
     public static void main(String[] args) {
-        HashMap<String, String> grupp = new HashMap<String, String>();
-        grupp.put("matti", "mage");
-        grupp.put("mikael", "mixu");
-        grupp.put("arto", "arppa");
-        /*
-        for (String nimi: grupp.keySet()) {
-            System.out.println(nimi + " - " + grupp.get(nimi));
-        }*/
-        Scanner sisend = new Scanner(System.in);
-        System.out.println("Sisesta nimi: ");
-        String nimi = sisend.nextLine();
-        nimi = nimi.toLowerCase();
-        System.out.println(nimi + " - " + grupp.get(nimi));
+        // loo konto tüüpi objekt nimega, annakonto
+        konto annakontoSEB = new konto();
+        konto annakontoSWED = new konto();
+        // lisan konkreetsed väärtused
+        annakontoSEB.lookonto("Anna", 0.0);
+        annakontoSWED.lookonto("Anna", 0.0);
+
+        annakontoSEB.lisaraha(20.0);
+        annakontoSWED.lisaraha(-50.0);
+        // väljastame tulemused
+        System.out.println("SEB");
+        System.out.println("Konto omanik = " + annakontoSEB.omanik);
+        System.out.println("Konto bilanss = " + annakontoSEB.bilanss);
+        annakontoSEB.votaraha(10.0);
+        System.out.println("Konto bilanss = " + annakontoSEB.bilanss);
+        annakontoSEB.votaraha(20.0);
+        System.out.println("Konto bilanss = " + annakontoSEB.bilanss);
+        annakontoSEB.teeulekanne(annakontoSWED, 10.0);
+        System.out.println("Konto bilanss = " + annakontoSEB.bilanss);
+        annakontoSEB.teeulekanne(annakontoSWED, 10.0);
+        System.out.println();
+        System.out.println("SWED");
+        System.out.println("Konto omanik = " + annakontoSWED.omanik);
+        System.out.println("Konto bilanss = " + annakontoSWED.bilanss);
     }
 }
