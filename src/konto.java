@@ -2,6 +2,19 @@ public class konto {
     // muutujad
     public String omanik;
     public Double bilanss;
+
+    //konstruktor
+
+
+    public konto(String omanik) {
+        this.omanik = omanik;
+        this.bilanss = 0.0;
+    }
+
+    public konto(String omanikunimi, Double summa) {
+        this.lookonto(omanikunimi, summa);
+    }
+
     // meetodid
 
     public void lookonto(String omanikunimi, Double summa) {
@@ -15,7 +28,7 @@ public class konto {
             return false;
         } else {
             this.bilanss = this.bilanss + summa;
-            System.out.println("KOntole lisatud summa " + summa);
+            System.out.println("Kontole lisatud summa " + summa);
             return true;
         }
     }
