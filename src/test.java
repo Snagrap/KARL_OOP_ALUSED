@@ -7,8 +7,11 @@
 public class test {
     public static void main(String[] args) {
         Menyy kohvik = new Menyy();
-        kohvik.lisaSook("Muna");
-        kohvik.lisaSook("Muna");
+        kohvik.lisaSook("Burger");
+        kohvik.lisaSook("Fisn'n'Chips");
+        kohvik.lisaSook("Hapukapsas");
+
+        kohvik.valjastaMenyy();
 
     }
 }

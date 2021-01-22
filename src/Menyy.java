@@ -15,4 +15,8 @@ public class Menyy {
             System.out.println("Antud toit on juba menüüs olemas");
         }
     }
+
+    public void valjastaMenyy() {
+        System.out.println(this.soogid);
+    }
 }
