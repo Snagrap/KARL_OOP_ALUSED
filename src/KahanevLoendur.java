@@ -16,5 +16,9 @@ public class KahanevLoendur {
             System.out.println("Loendur ei saa minna negatiivseks");
         }
     }
+
+    public void reset() {
+        this.vaartus = 0;
+    }
 }
 
