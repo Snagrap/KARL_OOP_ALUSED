@@ -19,4 +19,8 @@ public class Menyy {
     public void valjastaMenyy() {
         System.out.println(this.soogid);
     }
+
+    public void puhastaMenyy() {
+        this.soogid.clear();
+    }
 }

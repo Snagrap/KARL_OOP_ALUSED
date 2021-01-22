@@ -10,7 +10,7 @@ public class test {
         kohvik.lisaSook("Burger");
         kohvik.lisaSook("Fisn'n'Chips");
         kohvik.lisaSook("Hapukapsas");
-
+        kohvik.puhastaMenyy();
         kohvik.valjastaMenyy();
 
     }
