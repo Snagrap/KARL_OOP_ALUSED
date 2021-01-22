@@ -10,7 +10,11 @@ public class KahanevLoendur {
     }
 
     public void kahane() {
-        this.vaartus = vaartus - 1;
+        if (vaartus > 0) {
+            this.vaartus = vaartus - 1;
+        } else {
+            System.out.println("Loendur ei saa minna negatiivseks");
+        }
     }
 }
 
