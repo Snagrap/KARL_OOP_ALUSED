@@ -1,8 +1,10 @@
 public class KahanevLoendur {
     private int vaartus;
+    private int algvaartus;
 
     public KahanevLoendur(int vaartusAlguses) {
         this.vaartus = vaartusAlguses;
+        this.algvaartus = vaartus;
     }
 
     public void valjastaVaartus() {
@@ -19,6 +21,10 @@ public class KahanevLoendur {
 
     public void reset() {
         this.vaartus = 0;
+    }
+
+    public void algvaartusta() {
+        this.vaartus = algvaartus;
     }
 }
 
