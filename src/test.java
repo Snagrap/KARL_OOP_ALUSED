@@ -6,16 +6,12 @@
 
 public class test {
     public static void main(String[] args) {
-        Loom minuLoom = new Loom("Minu loom");
-        System.out.println(minuLoom);
-        minuLoom.jalutan();
-        minuLoom.s66n();
-        minuLoom.h22l();
-        System.out.println("-------------------");
-        Kass miisu = new Kass("Miisu", "Punane");
-        System.out.println(miisu);
-        miisu.jalutan();
-        miisu.s66n();
-        miisu.h22l();
+        Inimene2 inim1 = new Inimene2();
+        Inimene2 inim2 = new Inimene2();
+        Inimene2 inim3 = new Inimene2();
+        Inimene2 inim4 = new Inimene2();
+        Inimene2 inim5 = new Inimene2();
+        Inimene2 inim6 = new Inimene2();
+        Inimene2 inim7 = new Inimene2();
     }
 }
