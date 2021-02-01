@@ -4,7 +4,7 @@
  * Inimene
  * */
 
-public class Test {
+public class test {
     public static void main(String[] args) {
         Inimene mati = new Inimene("Mati");
         mati.setPikkus(1.80);
