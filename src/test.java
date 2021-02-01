@@ -1,29 +1,27 @@
 /*
- * 25.01
+ * 01.02
  * autor - Karl Karilaid
- * Kapseldus, getterid, setterid ja toString()
+ * Inimene
  * */
 
-public class test {
+public class Test {
     public static void main(String[] args) {
-        Ristkylik r1 = new Ristkylik();
+        Inimene mati = new Inimene("Mati");
+        mati.setPikkus(1.80);
+        mati.setMass(149.0);
+        System.out.println(mati.getNimi() + " on " + mati.getPikkus() + "m pikk ja kaalub " + mati.getMass() + " kg");
+        System.out.println("kmi = " + mati.kmi());
+        System.out.printf("kmi = %.2f\n", mati.kmi());
 
-        r1.setLaius(2.0);
-        r1.setKorgus(4.0);
-        System.out.println(r1);
-        System.out.println("-------------");
+        mati.suurendaKaal();
+        System.out.println(mati.getNimi() + " on " + mati.getPikkus() + "m pikk ja kaalub " + mati.getMass() + " kg");
 
-        Ristkylik r2 = new Ristkylik();
-        r2.setLaius(4.2);
-        r2.setKorgus(3.6);
-        System.out.println(r2);
-        System.out.println("------------");
+        mati.suurendaKaal(5.0);
+        System.out.println(mati.getNimi() + " on " + mati.getPikkus() + "m pikk ja kaalub " + mati.getMass() + " kg");
+        System.out.printf("kmi = %.2f\n", mati.kmi());
 
-        Ristkylik r3 = new Ristkylik();
-        r3.setKorgus(6.2);
-        r3.setLaius(5.4);
-        System.out.println(r3);
-        System.out.println("-------------");
-
+        mati.normaalKaal();
+        System.out.println(mati.getNimi() + " on " + mati.getPikkus() + "m pikk ja kaalub " + mati.getMass() + " kg");
+        System.out.printf("kmi = %.2f\n", mati.kmi());
     }
 }
