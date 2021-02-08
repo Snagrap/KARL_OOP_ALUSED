@@ -1,28 +1,20 @@
 /*
- * 03.02
+ * 09.02
  * autor - Karl Karilaid
- * Tunnitöö Inimene
+ * Kodutöö Restoraan
  * */
-
-import java.util.ArrayList;
 
 public class test {
     public static void main(String[] args) {
-        ArrayList<Sodur> armee1 = new ArrayList<>();
-        ArrayList<Sodur> armee2 = new ArrayList<>();
+        Restoraan restoraan1 = new Restoraan("Lore", "kala");
+        Restoraan restoraan2 = new Restoraan("McDonalds", "burger");
+        Restoraan restoraan3 = new Restoraan("Hesburger", "friikartul");
 
-        for (int kord = 1; kord <= 20; kord++) {
-            int armeeNr = (int) Math.round(Math.random() * 2);
-            if (armeeNr == 1) {
-                armee1.add(new Sodur(armeeNr));
-            }
-            if (armeeNr == 2) {
-                armee2.add(new Sodur(armeeNr));
-            }
-        }
-        for (Sodur sodur : armee1) {
-            sodur.info();
-        }
+        restoraan1.avaRestoran();
+        restoraan2.avaRestoran();
+        restoraan3.avaRestoran();
+
 
     }
+
 }
