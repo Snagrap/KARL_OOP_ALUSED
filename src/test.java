@@ -1,17 +1,28 @@
 /*
- * 01.02
+ * 03.02
  * autor - Karl Karilaid
- * Tunnitöö Loom
+ * Tunnitöö Inimene
  * */
+
+import java.util.ArrayList;
 
 public class test {
     public static void main(String[] args) {
-        Inimene2 inim1 = new Inimene2();
-        Inimene2 inim2 = new Inimene2();
-        Inimene2 inim3 = new Inimene2();
-        Inimene2 inim4 = new Inimene2();
-        Inimene2 inim5 = new Inimene2();
-        Inimene2 inim6 = new Inimene2();
-        Inimene2 inim7 = new Inimene2();
+        ArrayList<Sodur> armee1 = new ArrayList<>();
+        ArrayList<Sodur> armee2 = new ArrayList<>();
+
+        for (int kord = 1; kord <= 20; kord++) {
+            int armeeNr = (int) Math.round(Math.random() * 2);
+            if (armeeNr == 1) {
+                armee1.add(new Sodur(armeeNr));
+            }
+            if (armeeNr == 2) {
+                armee2.add(new Sodur(armeeNr));
+            }
+        }
+        for (Sodur sodur : armee1) {
+            sodur.info();
+        }
+
     }
 }

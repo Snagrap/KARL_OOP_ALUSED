@@ -1,11 +1,13 @@
 public class Sodur extends Inimene2 {
-    public int armee;
+    private int armeeNr;
 
-    public Sodur(String nimi) {
-        super(nimi);
+    public Sodur(int armeeNr) {
+        this.armeeNr = armeeNr;
     }
 
-    public void setArmee() {
-        //this.armee = randint(1,2);
+    @Override
+    public void info() {
+        super.info();
+        System.out.println("Armee number = " + this.armeeNr);
     }
 }
