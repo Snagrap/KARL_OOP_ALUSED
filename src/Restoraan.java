@@ -1,6 +1,7 @@
 public class Restoraan {
     public String restoraniNimi;
     public String soogiTyyp;
+    public int kylalised = 0;
 
     public Restoraan(String restoraniNimi, String soogiTyyp) {
         this.restoraniNimi = restoraniNimi;
@@ -15,5 +16,10 @@ public class Restoraan {
 
     public void avaRestoran() {
         System.out.println("Restoraan on nüüd avatud!");
+    }
+
+    public void teenindatud() {
+        this.kylalised++;
+        System.out.println("Täna on külastatud meid " + this.kylalised + " korda");
     }
 }

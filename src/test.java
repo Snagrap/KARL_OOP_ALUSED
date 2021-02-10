@@ -14,6 +14,10 @@ public class test {
         restoraan2.avaRestoran();
         restoraan3.avaRestoran();
 
+        restoraan1.teenindatud();
+        restoraan1.teenindatud();
+        restoraan1.teenindatud();
+
 
     }
 
