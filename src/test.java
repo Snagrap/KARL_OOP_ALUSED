@@ -6,24 +6,20 @@
 
 public class test {
     public static void main(String[] args) {
-        Restoraan restoraan1 = new Restoraan("Lore", "kala");
-        Restoraan restoraan2 = new Restoraan("McDonalds", "burger");
-        Restoraan restoraan3 = new Restoraan("Hesburger", "friikartul");
+        Sein seinPohi = new Sein("põhi sein");
+        Sein seinLouna = new Sein("lõuna sein");
+        Sein seinLaane = new Sein("lääne sein");
+        Sein seinIda = new Sein("ida sein");
 
-        restoraan1.avaRestoran();
-        restoraan2.avaRestoran();
-        restoraan3.avaRestoran();
+        Lagi lagi = new Lagi(2.5, "helesinine");
 
-        restoraan1.teenindatud();
-        restoraan1.teenindatud();
-        restoraan1.teenindatud();
+        Voodi voodi = new Voodi("kahele", 2, 2, 1, 70);
 
-        Restoraan Jaatis1 = new JaatiseKiosk("Jäätisekiosk", "Jäätised");
-        Jaatis1.avaRestoran();
-        //Jaatis1.lisaJaatis();
-        Jaatis1.teenindatud();
+        Lamp lamp = new Lamp("Klassikaline", false);
 
-
+        Magamistuba magamistuba = new Magamistuba("külaliste magamistuba", seinPohi, seinLouna, seinLaane, seinLouna, lagi, voodi, lamp);
+        magamistuba.valmistaVoodi();
+        magamistuba.valmistaLamp();
+        System.out.println(magamistuba.getLamp().isSisseLulitatud());
     }
-
 }
