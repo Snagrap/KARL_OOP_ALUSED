@@ -1,5 +1,5 @@
 /*
- * 09.02
+ * 10.02
  * autor - Karl Karilaid
  * Kodutöö Restoraan
  * */
@@ -17,6 +17,11 @@ public class test {
         restoraan1.teenindatud();
         restoraan1.teenindatud();
         restoraan1.teenindatud();
+
+        Restoraan Jaatis1 = new JaatiseKiosk("Jäätisekiosk", "Jäätised");
+        Jaatis1.avaRestoran();
+        //Jaatis1.lisaJaatis();
+        Jaatis1.teenindatud();
 
 
     }

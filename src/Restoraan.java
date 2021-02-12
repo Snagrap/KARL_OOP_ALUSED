@@ -1,13 +1,12 @@
 public class Restoraan {
-    public String restoraniNimi;
-    public String soogiTyyp;
-    public int kylalised = 0;
+    private String restoraniNimi;
+    private String soogiTyyp;
+    private int kylalised = 0;
 
     public Restoraan(String restoraniNimi, String soogiTyyp) {
         this.restoraniNimi = restoraniNimi;
         this.soogiTyyp = soogiTyyp;
     }
-
 
     @Override
     public String toString() {
